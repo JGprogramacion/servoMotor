@@ -1,0 +1,15 @@
+#include <Servo.h>                              //incluir libreria para utilizar comandos de forma mas simple.
+
+int servoPin = 10;                              //Crear variable y asignar pin de arduino para enviar una señal PWM
+Servo myServo;                                  //Crear objeto de servo con el nombre myServo
+
+void setup() {
+  myServo.attach(servoPin);                      //Inicializar servoMotor              
+}
+
+void loop() {
+  myServo.write(0);                               //Enviar señal pwm a servomotor, gira y se ubica en cero grados.
+  delay(2000);                                    //Tiempo de espera en los grados asignados (instrucción(es) anterior)
+  myServo.write(90);                              //Enviar señal pwm a servomotor, gira y se ubica en 90 grados.
+  delay(2000);                                    //Tiempo de espera en los grados asignados (instrucción(es) anterior después del último delay)
+}
